@@ -1,0 +1,94 @@
+digraph g {
+node [ fontsize = "10", shape = record ];
+edge [];
+
+"account" [shape = record, label = "{<col0> \N| uid:  bigint\lmail:  character varying(200)\llast_login:  timestamp without time zone\llocked:  boolean\l}" ];
+
+"brand" [shape = record, label = "{<col0> \N| brand_id:  bigint\l}" ];
+
+"confirmaccount" [shape = record, label = "{<col0> \N| uid:  bigint\lconfirm:  character varying(200)\lconfirm_date:  timestamp without time zone\l}" ];
+
+"country" [shape = record, label = "{<col0> \N| country_code:  character(2)\ltitle:  character varying(100)\llocaltitle:  character varying(100)\l}" ];
+
+"currency" [shape = record, label = "{<col0> \N| currency_id:  bigint\l}" ];
+
+"entity" [shape = record, label = "{<col0> \N| ent_id:  bigserial\llocale_id:  integer\lcreated_at:  timestamp without time zone\lcurrent_revision:  integer\lcreator:  bigint\l}" ];
+
+"entityproperty" [shape = record, label = "{<col0> \N| eprop_id:  bigserial\lprop_id:  bigint\lent_id:  bigint\lvalue:  text\lunit_id:  bigint\lmin_rev:  integer\lmax_rev:  integer\l}" ];
+
+"entityrevision" [shape = record, label = "{<col0> \N| ent_id:  bigint\lrev:  integer\ltitle:  character varying(255)\lcreated_at:  timestamp without time zone\lgroup_id:  bigint\lcreator:  bigint\l}" ];
+
+"localaccount" [shape = record, label = "{<col0> \N| uid:  bigint\lpassword:  character varying(32)\lsalt:  character(10)\l}" ];
+
+"locale" [shape = record, label = "{<col0> \N| locale_id:  serial\lfallback_id:  integer\ltitle:  character varying(50)\llocaltitle:  character varying(50)\lcreated_at:  timestamp without time zone\l}" ];
+
+"product" [shape = record, label = "{<col0> \N| prod_id:  bigint\l}" ];
+
+"productrevision" [shape = record, label = "{<col0> \N| prod_id:  bigint\lrev:  integer\ltype_id:  bigint\lbrand_id:  bigint\limageurl:  character varying(100)\l}" ];
+
+"producttype" [shape = record, label = "{<col0> \N| type_id:  bigint\l}" ];
+
+"property" [shape = record, label = "{<col0> \N| prop_id:  bigint\l}" ];
+
+"propertyrevision" [shape = record, label = "{<col0> \N| prop_id:  bigint\lrev:  integer\lname:  character varying(50)\lminvalue:  integer\lmaxvalue:  integer\ltype:  propertytype\luniq:  boolean\l}" ];
+
+"receipt" [shape = record, label = "{<col0> \N| rid:  bigint\lsid:  bigint\ldraft:  boolean\lcreated_at:  timestamp without time zone\l}" ];
+
+"receiptentry" [shape = record, label = "{<col0> \N| pkey:  bigserial\lrid:  bigint\lpid:  bigint\lprice:  bigint\l}" ];
+
+"session" [shape = record, label = "{<col0> \N| uid:  bigint\lsid:  character(32)\llast_active:  timestamp without time zone\l}" ];
+
+"shop" [shape = record, label = "{<col0> \N| shop_id:  bigint\l}" ];
+
+"shoprevision" [shape = record, label = "{<col0> \N| shop_id:  bigint\lrev:  integer\ltype_id:  bigint\limageurl:  character varying(100)\llat:  double precision\llng:  double precision\lstreet:  character varying(100)\lcity:  character varying(100)\lcountry_code:  character(2)\l}" ];
+
+"typerevision" [shape = record, label = "{<col0> \N| type_id:  bigint\lrev:  integer\lparent_id:  bigint\l}" ];
+
+"unit" [shape = record, label = "{<col0> \N| unit_id:  bigint\l}" ];
+
+"unitrevision" [shape = record, label = "{<col0> \N| unit_id:  bigint\lrev:  integer\lbase_id:  bigint\lfactor:  double precision\l}" ];
+
+
+"account" -> "entity" [label="account_uid_fkey"];
+"brand" -> "entity" [label="brand_brand_id_fkey"];
+"confirmaccount" -> "account" [label="confirmaccount_uid_fkey"];
+"currency" -> "entity" [label="currency_currency_id_fkey"];
+"entity" -> "entityrevision" [label="fkey_currentrev"];
+"entity" -> "locale" [label="entity_locale_id_fkey"];
+"entity" -> "account" [label="fkey_entity_creator"];
+"entityproperty" -> "property" [label="entityproperty_prop_id_fkey"];
+"entityproperty" -> "entity" [label="entityproperty_ent_id_fkey"];
+"entityproperty" -> "entityrevision" [label="entityproperty_ent_id_fkey1"];
+"entityproperty" -> "entityrevision" [label="entityproperty_ent_id_fkey2"];
+"entityproperty" -> "unit" [label="entityproperty_unit_id_fkey"];
+"entityrevision" -> "entity" [label="entityrevision_ent_id_fkey"];
+"entityrevision" -> "entity" [label="entityrevision_group_id_fkey"];
+"entityrevision" -> "account" [label="fkey_entityrevision_creator"];
+"localaccount" -> "account" [label="localaccount_uid_fkey"];
+"locale" -> "locale" [label="locale_fallback_id_fkey"];
+"product" -> "entity" [label="product_prod_id_fkey"];
+"productrevision" -> "product" [label="productrevision_prod_id_fkey"];
+"productrevision" -> "entityrevision" [label="productrevision_prod_id_fkey1"];
+"productrevision" -> "producttype" [label="productrevision_type_id_fkey"];
+"productrevision" -> "brand" [label="productrevision_brand_id_fkey"];
+"producttype" -> "entity" [label="producttype_type_id_fkey"];
+"property" -> "entity" [label="property_prop_id_fkey"];
+"propertyrevision" -> "property" [label="propertyrevision_prop_id_fkey"];
+"propertyrevision" -> "entityrevision" [label="propertyrevision_prop_id_fkey1"];
+"receipt" -> "entity" [label="receipt_rid_fkey"];
+"receiptentry" -> "entity" [label="receiptentry_rid_fkey"];
+"session" -> "account" [label="session_uid_fkey"];
+"shop" -> "entity" [label="shop_shop_id_fkey"];
+"shoprevision" -> "shop" [label="shoprevision_shop_id_fkey"];
+"shoprevision" -> "entityrevision" [label="shoprevision_shop_id_fkey1"];
+"shoprevision" -> "country" [label="shoprevision_country_code_fkey"];
+"typerevision" -> "entityrevision" [label="typerevision_type_id_fkey"];
+"typerevision" -> "producttype" [label="typerevision_type_id_fkey1"];
+"typerevision" -> "producttype" [label="typerevision_parent_id_fkey"];
+"unit" -> "entity" [label="unit_unit_id_fkey"];
+"unitrevision" -> "unit" [label="unitrevision_unit_id_fkey"];
+"unitrevision" -> "entityrevision" [label="unitrevision_unit_id_fkey1"];
+"unitrevision" -> "unit" [label="unitrevision_base_id_fkey"];
+}
+
+

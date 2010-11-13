@@ -1,0 +1,3242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Header: /cvsroot/autodoc/autodoc/xml.tmpl,v 1.2 2006/05/16 19:01:27 rbt Exp $ -->
+
+<book id="database.tagaprice" xreflabel="tagaprice database schema"><title>tagaprice Model</title>
+
+
+
+
+  <chapter id="public.schema"
+           xreflabel="public">
+    <title>Schema public</title>
+    <para>standard public schema</para>
+
+
+      <section id="public.table.account"
+               xreflabel="public.account">
+        <title id="public.table.account-title">
+         Table:
+         
+         <structname>account</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>account</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>uid</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>mail</structfield></term>
+              <listitem><para>
+                <type>character varying(200)</type>
+
+
+
+
+                      <literal>UNIQUE</literal>
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>last_login</structfield></term>
+              <listitem><para>
+                <type>timestamp without time zone</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>locked</structfield></term>
+              <listitem><para>
+                <type>boolean</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT true</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing confirmaccount via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.confirmaccount"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entity"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entityrevision"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.localaccount"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.session"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.brand"
+               xreflabel="public.brand">
+        <title id="public.table.brand-title">
+         Table:
+         
+         <structname>brand</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>brand</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>brand_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing productrevision via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.productrevision"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.confirmaccount"
+               xreflabel="public.confirmaccount">
+        <title id="public.table.confirmaccount-title">
+         Table:
+         
+         <structname>confirmaccount</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>confirmaccount</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>uid</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.account"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>confirm</structfield></term>
+              <listitem><para>
+                <type>character varying(200)</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>confirm_date</structfield></term>
+              <listitem><para>
+                <type>timestamp without time zone</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT now()</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.country"
+               xreflabel="public.country">
+        <title id="public.table.country-title">
+         Table:
+         
+         <structname>country</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>country</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>country_code</structfield></term>
+              <listitem><para>
+                <type>character(2)</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>title</structfield></term>
+              <listitem><para>
+                <type>character varying(100)</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>localtitle</structfield></term>
+              <listitem><para>
+                <type>character varying(100)</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing shoprevision via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.shoprevision"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.currency"
+               xreflabel="public.currency">
+        <title id="public.table.currency-title">
+         Table:
+         
+         <structname>currency</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>currency</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>currency_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.entity"
+               xreflabel="public.entity">
+        <title id="public.table.entity-title">
+         Table:
+         
+         <structname>entity</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>entity</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>ent_id</structfield></term>
+              <listitem><para>
+                <type>bigserial</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>locale_id</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+
+
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.locale"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>created_at</structfield></term>
+              <listitem><para>
+                <type>timestamp without time zone</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT now()</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>current_revision</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>creator</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.account"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+        <variablelist>
+          <title>Constraints on entity</title>
+
+          <varlistentry>
+            <term>entity_current_revision_check</term>
+            <listitem><para>CHECK ((current_revision &gt;= 1))</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing account via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.account"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.brand"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.currency"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entityproperty"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entityrevision"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.product"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.producttype"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.property"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.receipt"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.receiptentry"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.shop"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.unit"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.entityproperty"
+               xreflabel="public.entityproperty">
+        <title id="public.table.entityproperty-title">
+         Table:
+         
+         <structname>entityproperty</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>entityproperty</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>eprop_id</structfield></term>
+              <listitem><para>
+                <type>bigserial</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>prop_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.property"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>ent_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>value</structfield></term>
+              <listitem><para>
+                <type>text</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>unit_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.unit"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>min_rev</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+
+
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>max_rev</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+        <variablelist>
+          <title>Constraints on entityproperty</title>
+
+          <varlistentry>
+            <term>entityproperty_check</term>
+            <listitem><para>CHECK ((min_rev &lt;= max_rev))</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.entityrevision"
+               xreflabel="public.entityrevision">
+        <title id="public.table.entityrevision-title">
+         Table:
+         
+         <structname>entityrevision</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>entityrevision</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>ent_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>rev</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>title</structfield></term>
+              <listitem><para>
+                <type>character varying(255)</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>created_at</structfield></term>
+              <listitem><para>
+                <type>timestamp without time zone</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT now()</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>group_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>creator</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.account"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+        <variablelist>
+          <title>Constraints on entityrevision</title>
+
+          <varlistentry>
+            <term>entityrevision_rev_check</term>
+            <listitem><para>CHECK ((rev &gt;= 1))</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing entity via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entity"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entityproperty"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.productrevision"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.propertyrevision"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.shoprevision"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.typerevision"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.unitrevision"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.localaccount"
+               xreflabel="public.localaccount">
+        <title id="public.table.localaccount-title">
+         Table:
+         
+         <structname>localaccount</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>localaccount</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>uid</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.account"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>password</structfield></term>
+              <listitem><para>
+                <type>character varying(32)</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>salt</structfield></term>
+              <listitem><para>
+                <type>character(10)</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.locale"
+               xreflabel="public.locale">
+        <title id="public.table.locale-title">
+         Table:
+         
+         <structname>locale</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>locale</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>locale_id</structfield></term>
+              <listitem><para>
+                <type>serial</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>fallback_id</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.locale"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>title</structfield></term>
+              <listitem><para>
+                <type>character varying(50)</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>localtitle</structfield></term>
+              <listitem><para>
+                <type>character varying(50)</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>created_at</structfield></term>
+              <listitem><para>
+                <type>timestamp without time zone</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT now()</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing entity via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entity"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.locale"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.product"
+               xreflabel="public.product">
+        <title id="public.table.product-title">
+         Table:
+         
+         <structname>product</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>product</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>prod_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing productrevision via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.productrevision"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.productrevision"
+               xreflabel="public.productrevision">
+        <title id="public.table.productrevision-title">
+         Table:
+         
+         <structname>productrevision</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>productrevision</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>prod_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.product"/>
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>rev</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>type_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.producttype"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>brand_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.brand"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>imageurl</structfield></term>
+              <listitem><para>
+                <type>character varying(100)</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.producttype"
+               xreflabel="public.producttype">
+        <title id="public.table.producttype-title">
+         Table:
+         
+         <structname>producttype</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>producttype</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>type_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing productrevision via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.productrevision"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.typerevision"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.property"
+               xreflabel="public.property">
+        <title id="public.table.property-title">
+         Table:
+         
+         <structname>property</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>property</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>prop_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing entityproperty via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entityproperty"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.propertyrevision"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.propertyrevision"
+               xreflabel="public.propertyrevision">
+        <title id="public.table.propertyrevision-title">
+         Table:
+         
+         <structname>propertyrevision</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>propertyrevision</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>prop_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.property"/>
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>rev</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>name</structfield></term>
+              <listitem><para>
+                <type>character varying(50)</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>minvalue</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>maxvalue</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>type</structfield></term>
+              <listitem><para>
+                <type>propertytype</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>uniq</structfield></term>
+              <listitem><para>
+                <type>boolean</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT true</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+        <variablelist>
+          <title>Constraints on propertyrevision</title>
+
+          <varlistentry>
+            <term>propertyrevision_check_name</term>
+            <listitem><para>CHECK (((length((name)::text) &gt; 0) AND (substr((name)::text, 0, 1) = lower(substr((name)::text, 0, 1)))))</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.receipt"
+               xreflabel="public.receipt">
+        <title id="public.table.receipt-title">
+         Table:
+         
+         <structname>receipt</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>receipt</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>rid</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>sid</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>draft</structfield></term>
+              <listitem><para>
+                <type>boolean</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT true</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>created_at</structfield></term>
+              <listitem><para>
+                <type>timestamp without time zone</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT now()</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.receiptentry"
+               xreflabel="public.receiptentry">
+        <title id="public.table.receiptentry-title">
+         Table:
+         
+         <structname>receiptentry</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>receiptentry</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>pkey</structfield></term>
+              <listitem><para>
+                <type>bigserial</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>rid</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>pid</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>price</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.session"
+               xreflabel="public.session">
+        <title id="public.table.session-title">
+         Table:
+         
+         <structname>session</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>session</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>uid</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.account"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>sid</structfield></term>
+              <listitem><para>
+                <type>character(32)</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>last_active</structfield></term>
+              <listitem><para>
+                <type>timestamp without time zone</type>
+
+
+
+                <literal>NOT NULL</literal>
+
+
+
+                <literal>DEFAULT now()</literal>
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+        <variablelist>
+          <title>Indexes on session</title>
+
+          <varlistentry>
+            <term>session_uid_key</term>
+            <listitem><para>uid</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.shop"
+               xreflabel="public.shop">
+        <title id="public.table.shop-title">
+         Table:
+         
+         <structname>shop</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>shop</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>shop_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing shoprevision via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.shoprevision"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.shoprevision"
+               xreflabel="public.shoprevision">
+        <title id="public.table.shoprevision-title">
+         Table:
+         
+         <structname>shoprevision</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>shoprevision</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>shop_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.shop"/>
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>rev</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>type_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>imageurl</structfield></term>
+              <listitem><para>
+                <type>character varying(100)</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>lat</structfield></term>
+              <listitem><para>
+                <type>double precision</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>lng</structfield></term>
+              <listitem><para>
+                <type>double precision</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>street</structfield></term>
+              <listitem><para>
+                <type>character varying(100)</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>city</structfield></term>
+              <listitem><para>
+                <type>character varying(100)</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>country_code</structfield></term>
+              <listitem><para>
+                <type>character(2)</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.country"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+        <variablelist>
+          <title>Constraints on shoprevision</title>
+
+          <varlistentry>
+            <term>shoprevision_check</term>
+            <listitem><para>CHECK (((lat IS NULL) = (lng IS NULL)))</para></listitem>
+          </varlistentry>
+
+
+
+          <varlistentry>
+            <term>shoprevision_lat_check</term>
+            <listitem><para>CHECK (((lat &gt;= ((-90))::double precision) AND (lat &lt;= (90)::double precision)))</para></listitem>
+          </varlistentry>
+
+
+
+          <varlistentry>
+            <term>shoprevision_lng_check</term>
+            <listitem><para>CHECK (((lng &gt;= ((-180))::double precision) AND (lng &lt;= (180)::double precision)))</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.typerevision"
+               xreflabel="public.typerevision">
+        <title id="public.table.typerevision-title">
+         Table:
+         
+         <structname>typerevision</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>typerevision</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>type_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.producttype"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>rev</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>parent_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.producttype"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.unit"
+               xreflabel="public.unit">
+        <title id="public.table.unit-title">
+         Table:
+         
+         <structname>unit</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>unit</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>unit_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing entityproperty via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.entityproperty"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.unitrevision"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.unitrevision"
+               xreflabel="public.unitrevision">
+        <title id="public.table.unitrevision-title">
+         Table:
+         
+         <structname>unitrevision</structname>
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <structname>unitrevision</structname>
+            </title>
+
+
+            <varlistentry>
+              <term><structfield>unit_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.unit"/>
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>rev</structfield></term>
+              <listitem><para>
+                <type>integer</type>
+
+
+                <literal>PRIMARY KEY</literal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>base_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.unit"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><structfield>factor</structfield></term>
+              <listitem><para>
+                <type>double precision</type>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+        <variablelist>
+          <title>Constraints on unitrevision</title>
+
+          <varlistentry>
+            <term>unitrevision_check</term>
+            <listitem><para>CHECK (((base_id IS NULL) = (factor IS NULL)))</para></listitem>
+          </varlistentry>
+
+
+
+          <varlistentry>
+            <term>unitrevision_factor_check</term>
+            <listitem><para>CHECK ((factor &lt;&gt; (0)::double precision))</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+
+
+  </chapter>
+
+</book>
+

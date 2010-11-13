@@ -1,0 +1,1318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>tagAprice - Surefire Report</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <div id="banner">
+                    <span id="bannerLeft">
+    
+            tagAprice
+    
+            </span>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Last Published: 2010-11-13
+                      </div>
+            <div class="xright">            <a href="">tagAprice</a>
+            
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+    
+                             <h5>Project Documentation</h5>
+            <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+              
+            
+              
+            <li class="expanded">
+                    <a href="project-reports.html">Project Reports</a>
+                  <ul>
+                  
+    <li class="none">
+              <strong>Surefire Report</strong>
+        </li>
+              </ul>
+        </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <script type="text/javascript">
+function toggleDisplay(elementId) {
+ var elm = document.getElementById(elementId + 'error');
+ if (elm && typeof elm.style != "undefined") {
+ if (elm.style.display == "none") {
+ elm.style.display = "";
+ document.getElementById(elementId + 'off').style.display = "none";
+ document.getElementById(elementId + 'on').style.display = "inline";
+ } else if (elm.style.display == "") { elm.style.display = "none";
+ document.getElementById(elementId + 'off').style.display = "inline";
+ document.getElementById(elementId + 'on').style.display = "none";
+ } 
+ } 
+ }
+</script><div class="section"><h2>Surefire Report</h2>
+</div>
+<div class="section"><h2>Summary</h2>
+<a name="Summary"></a>
+<p>[<a href="#Summary">Summary</a>
+] [<a href="#Package_List">Package List</a>
+] [<a href="#Test_Cases">Test Cases</a>
+]</p>
+<br />
+<table class="bodyTable"><tr class="a"><th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td>60</td>
+<td>9</td>
+<td>2</td>
+<td>0</td>
+<td>81.667%</td>
+<td>17.563</td>
+</tr>
+</table>
+<br />
+<p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p>
+<br />
+</div>
+<div class="section"><h2>Package List</h2>
+<a name="Package_List"></a>
+<p>[<a href="#Summary">Summary</a>
+] [<a href="#Package_List">Package List</a>
+] [<a href="#Test_Cases">Test Cases</a>
+]</p>
+<br />
+<table class="bodyTable"><tr class="a"><th>Package</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.client">org.tagaprice.client</a>
+</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+<td>0.015</td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.serializer">org.tagaprice.server.serializer</a>
+</td>
+<td>23</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>91.304%</td>
+<td>0.252</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.dao">org.tagaprice.server.dao</a>
+</td>
+<td>22</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>63.636%</td>
+<td>17.252</td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.shared">org.tagaprice.shared</a>
+</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.044</td>
+</tr>
+</table>
+<br />
+<p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
+<div class="section"><h3>org.tagaprice.client</h3>
+<a name="org.tagaprice.client"></a>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.clientProductHandlerImplTest"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.clientProductHandlerImplTest">ProductHandlerImplTest</a>
+</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+<td>0.01</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.clientMorphWidgetTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.clientMorphWidgetTest">MorphWidgetTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.005</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.tagaprice.server.serializer</h3>
+<a name="org.tagaprice.server.serializer"></a>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.serializerJsonDeSerializerTest"><img src="images/icon_warning_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.serializerJsonDeSerializerTest">JsonDeSerializerTest</a>
+</td>
+<td>23</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>91.304%</td>
+<td>0.252</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.tagaprice.server.dao</h3>
+<a name="org.tagaprice.server.dao"></a>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.daoProductDAOTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoProductDAOTest">ProductDAOTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>1.501</td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.daoPropertyDAOTest"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoPropertyDAOTest">PropertyDAOTest</a>
+</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+<td>7.279</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.daoCountryDAOTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoCountryDAOTest">CountryDAOTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.235</td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.daoUnitDAOTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoUnitDAOTest">UnitDAOTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>1.228</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.daoShopDAOTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoShopDAOTest">ShopDAOTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>1.626</td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.daoPropertyDefinitionDAOTest"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoPropertyDefinitionDAOTest">PropertyDefinitionDAOTest</a>
+</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+<td>0.583</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.daoTypeDAOTest"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoTypeDAOTest">TypeDAOTest</a>
+</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+<td>1.6</td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.daoAccountDAOTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoAccountDAOTest">AccountDAOTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.476</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.daoEntityDAOTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoEntityDAOTest">EntityDAOTest</a>
+</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>2.21</td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.daoLocalAccountDAOTest"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.daoLocalAccountDAOTest">LocalAccountDAOTest</a>
+</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+<td>0.514</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.tagaprice.shared</h3>
+<a name="org.tagaprice.shared"></a>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.sharedPropertyDefinitionTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.sharedPropertyDefinitionTest">PropertyDefinitionTest</a>
+</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.03</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.sharedPropertyValidatorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.sharedPropertyValidatorTest">PropertyValidatorTest</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.014</td>
+</tr>
+</table>
+</div>
+<br />
+</div>
+<div class="section"><h2>Test Cases</h2>
+<a name="Test_Cases"></a>
+<p>[<a href="#Summary">Summary</a>
+] [<a href="#Package_List">Package List</a>
+] [<a href="#Test_Cases">Test Cases</a>
+]</p>
+<div class="section"><h3>ProductDAOTest</h3>
+<a name="org.tagaprice.server.daoProductDAOTest"></a>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCreate</td>
+<td>0.63</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testRevs</td>
+<td>0.866</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>ProductHandlerImplTest</h3>
+<a name="org.tagaprice.clientProductHandlerImplTest"></a>
+<table class="bodyTable"><tr class="a"><td><a href="#org.tagaprice.client.ProductHandlerImplTest.initializationError"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.client.ProductHandlerImplTest.initializationError">initializationError</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('initializationError');"><span style="display: inline;" id="initializationErroroff">+</span><span id="initializationErroron" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.001</td>
+</tr>
+<tr class="b"><td></td>
+<td>com/google/gwt/dev/cfg/Condition</td>
+<td></td>
+</tr>
+<tr class="a"><td></td>
+<td>  <div id="initializationErrorerror" style="display:none;"><div class="source"><pre>java.lang.NoClassDefFoundError: com/google/gwt/dev/cfg/Condition<br />
+at com.google.gwt.junit.client.GWTTestCase.createStrategy(GWTTestCase.java:310)<br />
+at com.google.gwt.junit.client.GWTTestCase.getStrategy(GWTTestCase.java:260)<br />
+at com.google.gwt.junit.client.GWTTestCase.getSyntheticModuleName(GWTTestCase.java:272)<br />
+at com.google.gwt.junit.client.GWTTestCase.setName(GWTTestCase.java:291)<br />
+at junit.framework.TestSuite.createTest(TestSuite.java:63)<br />
+at junit.framework.TestSuite.addTestMethod(TestSuite.java:294)<br />
+at junit.framework.TestSuite.addTestsFromTestCase(TestSuite.java:150)<br />
+at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:129)<br />
+at org.junit.internal.runners.JUnit38ClassRunner.&lt;init&gt;(JUnit38ClassRunner.java:71)<br />
+at org.junit.internal.builders.JUnit3Builder.runnerForClass(JUnit3Builder.java:14)<br />
+at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:57)<br />
+at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:29)<br />
+at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:57)<br />
+at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:24)<br />
+at org.apache.maven.surefire.junit4.JUnit4TestSet.&lt;init&gt;(JUnit4TestSet.java:45)<br />
+at org.apache.maven.surefire.junit4.JUnit4DirectoryTestSuite.createTestSet(JUnit4DirectoryTestSuite.java:56)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.locateTestSets(AbstractDirectoryTestSuite.java:96)<br />
+at org.apache.maven.surefire.Surefire.createSuiteFromDefinition(Surefire.java:209)<br />
+at org.apache.maven.surefire.Surefire.run(Surefire.java:156)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:338)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:997)<br />
+Caused by: java.lang.ClassNotFoundException: com.google.gwt.dev.cfg.Condition<br />
+at java.net.URLClassLoader$1.run(URLClassLoader.java:202)<br />
+at java.security.AccessController.doPrivileged(Native Method)<br />
+at java.net.URLClassLoader.findClass(URLClassLoader.java:190)<br />
+at java.lang.ClassLoader.loadClass(ClassLoader.java:307)<br />
+at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)<br />
+at java.lang.ClassLoader.loadClass(ClassLoader.java:248)<br />
+... 25 more<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>PropertyDefinitionTest</h3>
+<a name="org.tagaprice.sharedPropertyDefinitionTest"></a>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testName</td>
+<td>0.001</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testId</td>
+<td>0.001</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testRev</td>
+<td>0.001</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testTitle</td>
+<td>0.001</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testLocaleId</td>
+<td>0</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testType</td>
+<td>0.001</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testMinValue</td>
+<td>0.001</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testMaxValue</td>
+<td>0.001</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testUnit</td>
+<td>0.001</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testUnique</td>
+<td>0.001</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>PropertyDAOTest</h3>
+<a name="org.tagaprice.server.daoPropertyDAOTest"></a>
+<table class="bodyTable"><tr class="b"><td><a href="#org.tagaprice.server.dao.PropertyDAOTest.testRev"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.dao.PropertyDAOTest.testRev">testRev</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testRev');"><span style="display: inline;" id="testRevoff">+</span><span id="testRevon" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>4.527</td>
+</tr>
+<tr class="a"><td></td>
+<td>FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+<td></td>
+</tr>
+<tr class="b"><td></td>
+<td>  <div id="testReverror" style="display:none;"><div class="source"><pre>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht<br />
+Position: 55<br />
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:273)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.postgresql.ds.jdbc23.AbstractJdbc23PooledConnection$StatementHandler.invoke(AbstractJdbc23PooledConnection.java:455)<br />
+at $Proxy8.executeQuery(Unknown Source)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:68)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:39)<br />
+at org.tagaprice.server.dao.PropertyDAO.save(PropertyDAO.java:128)<br />
+at org.tagaprice.server.dao.EntityDAO.save(EntityDAO.java:100)<br />
+at org.tagaprice.server.dao.PropertyDAOTest.setUp(PropertyDAOTest.java:49)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)<br />
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)<br />
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)<br />
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)<br />
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)<br />
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)<br />
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)<br />
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)<br />
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)<br />
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)<br />
+at org.junit.runners.ParentRunner.run(ParentRunner.java:236)<br />
+at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)<br />
+at org.apache.maven.surefire.Surefire.run(Surefire.java:177)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:338)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:997)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.dao.PropertyDAOTest.testCreate"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.dao.PropertyDAOTest.testCreate">testCreate</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testCreate');"><span style="display: inline;" id="testCreateoff">+</span><span id="testCreateon" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.891</td>
+</tr>
+<tr class="b"><td></td>
+<td>FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+<td></td>
+</tr>
+<tr class="a"><td></td>
+<td>  <div id="testCreateerror" style="display:none;"><div class="source"><pre>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht<br />
+Position: 55<br />
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:273)<br />
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.postgresql.ds.jdbc23.AbstractJdbc23PooledConnection$StatementHandler.invoke(AbstractJdbc23PooledConnection.java:455)<br />
+at $Proxy8.executeQuery(Unknown Source)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:68)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:39)<br />
+at org.tagaprice.server.dao.PropertyDAO.save(PropertyDAO.java:128)<br />
+at org.tagaprice.server.dao.EntityDAO.save(EntityDAO.java:100)<br />
+at org.tagaprice.server.dao.PropertyDAOTest.setUp(PropertyDAOTest.java:49)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)<br />
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)<br />
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)<br />
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)<br />
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)<br />
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)<br />
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)<br />
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)<br />
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)<br />
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)<br />
+at org.junit.runners.ParentRunner.run(ParentRunner.java:236)<br />
+at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)<br />
+at org.apache.maven.surefire.Surefire.run(Surefire.java:177)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:338)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:997)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.dao.PropertyDAOTest.testPropertyId"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.dao.PropertyDAOTest.testPropertyId">testPropertyId</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testPropertyId');"><span style="display: inline;" id="testPropertyIdoff">+</span><span id="testPropertyIdon" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.876</td>
+</tr>
+<tr class="a"><td></td>
+<td>FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+<td></td>
+</tr>
+<tr class="b"><td></td>
+<td>  <div id="testPropertyIderror" style="display:none;"><div class="source"><pre>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht<br />
+Position: 55<br />
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:273)<br />
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.postgresql.ds.jdbc23.AbstractJdbc23PooledConnection$StatementHandler.invoke(AbstractJdbc23PooledConnection.java:455)<br />
+at $Proxy8.executeQuery(Unknown Source)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:68)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:39)<br />
+at org.tagaprice.server.dao.PropertyDAO.save(PropertyDAO.java:128)<br />
+at org.tagaprice.server.dao.EntityDAO.save(EntityDAO.java:100)<br />
+at org.tagaprice.server.dao.PropertyDAOTest.setUp(PropertyDAOTest.java:49)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)<br />
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)<br />
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)<br />
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)<br />
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)<br />
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)<br />
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)<br />
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)<br />
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)<br />
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)<br />
+at org.junit.runners.ParentRunner.run(ParentRunner.java:236)<br />
+at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)<br />
+at org.apache.maven.surefire.Surefire.run(Surefire.java:177)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:338)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:997)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.dao.PropertyDAOTest.testValueUpdate"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.dao.PropertyDAOTest.testValueUpdate">testValueUpdate</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testValueUpdate');"><span style="display: inline;" id="testValueUpdateoff">+</span><span id="testValueUpdateon" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.895</td>
+</tr>
+<tr class="b"><td></td>
+<td>FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+<td></td>
+</tr>
+<tr class="a"><td></td>
+<td>  <div id="testValueUpdateerror" style="display:none;"><div class="source"><pre>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht<br />
+Position: 55<br />
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:273)<br />
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.postgresql.ds.jdbc23.AbstractJdbc23PooledConnection$StatementHandler.invoke(AbstractJdbc23PooledConnection.java:455)<br />
+at $Proxy8.executeQuery(Unknown Source)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:68)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:39)<br />
+at org.tagaprice.server.dao.PropertyDAO.save(PropertyDAO.java:128)<br />
+at org.tagaprice.server.dao.EntityDAO.save(EntityDAO.java:100)<br />
+at org.tagaprice.server.dao.PropertyDAOTest.setUp(PropertyDAOTest.java:49)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)<br />
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)<br />
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)<br />
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)<br />
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)<br />
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)<br />
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)<br />
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)<br />
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)<br />
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)<br />
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)<br />
+at org.junit.runners.ParentRunner.run(ParentRunner.java:236)<br />
+at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)<br />
+at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)<br />
+at org.apache.maven.surefire.Surefire.run(Surefire.java:177)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:338)<br />
+at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:997)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>CountryDAOTest</h3>
+<a name="org.tagaprice.server.daoCountryDAOTest"></a>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGet</td>
+<td>0.233</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>UnitDAOTest</h3>
+<a name="org.tagaprice.server.daoUnitDAOTest"></a>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNoBaseId</td>
+<td>0.605</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testBaseId</td>
+<td>0.617</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>JsonDeSerializerTest</h3>
+<a name="org.tagaprice.server.serializerJsonDeSerializerTest"></a>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testUnit</td>
+<td>0.031</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testProperty</td>
+<td>0.007</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCurrency</td>
+<td>0.004</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCurrency_nullName</td>
+<td>0.003</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testPrice</td>
+<td>0.004</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testPrice_nullCurrency</td>
+<td>0.002</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testProduct</td>
+<td>0.013</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testProduct_noBrand</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testProduct_noName</td>
+<td>0.027</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testProduct_noImage</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testProduct_noAvgPrice</td>
+<td>0.007</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testProduct_noQuantity</td>
+<td>0.007</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testProperty_nullValues</td>
+<td>0.002</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testQuantity</td>
+<td>0.004</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testQuantity_valueOnly</td>
+<td>0.002</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.serializer.JsonDeSerializerTest.testReceiptData"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.serializer.JsonDeSerializerTest.testReceiptData">testReceiptData</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testReceiptData');"><span style="display: inline;" id="testReceiptDataoff">+</span><span id="testReceiptDataon" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.004</td>
+</tr>
+<tr class="a"><td></td>
+<td>Not yet implemented</td>
+<td></td>
+</tr>
+<tr class="b"><td></td>
+<td>  <div id="testReceiptDataerror" style="display:none;"><div class="source"><pre>java.lang.AssertionError: Not yet implemented<br />
+at org.junit.Assert.fail(Assert.java:91)<br />
+at org.tagaprice.server.serializer.JsonDeSerializerTest.testReceiptData(JsonDeSerializerTest.java:177)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSearchResult</td>
+<td>0.008</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testServerResponse</td>
+<td>0.009</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testServerResponse_nullResponse</td>
+<td>0.002</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testServerResponse_nullStatus</td>
+<td>0.002</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testServerResponse_accessDenied</td>
+<td>0.002</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.serializer.JsonDeSerializerTest.testShopData"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.serializer.JsonDeSerializerTest.testShopData">testShopData</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testShopData');"><span style="display: inline;" id="testShopDataoff">+</span><span id="testShopDataon" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.002</td>
+</tr>
+<tr class="a"><td></td>
+<td>Not yet implemented</td>
+<td></td>
+</tr>
+<tr class="b"><td></td>
+<td>  <div id="testShopDataerror" style="display:none;"><div class="source"><pre>java.lang.AssertionError: Not yet implemented<br />
+at org.junit.Assert.fail(Assert.java:91)<br />
+at org.tagaprice.server.serializer.JsonDeSerializerTest.testShopData(JsonDeSerializerTest.java:219)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testUnit_nullName</td>
+<td>0.003</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>ShopDAOTest</h3>
+<a name="org.tagaprice.server.daoShopDAOTest"></a>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testRev</td>
+<td>0.904</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCreate</td>
+<td>0.718</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>PropertyDefinitionDAOTest</h3>
+<a name="org.tagaprice.server.daoPropertyDefinitionDAOTest"></a>
+<table class="bodyTable"><tr class="b"><td><a href="#org.tagaprice.server.dao.PropertyDefinitionDAOTest.testCreate"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.dao.PropertyDefinitionDAOTest.testCreate">testCreate</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testCreate');"><span style="display: inline;" id="testCreateoff">+</span><span id="testCreateon" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.578</td>
+</tr>
+<tr class="a"><td></td>
+<td>FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+<td></td>
+</tr>
+<tr class="b"><td></td>
+<td>  <div id="testCreateerror" style="display:none;"><div class="source"><pre>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht<br />
+Position: 55<br />
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:273)<br />
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.postgresql.ds.jdbc23.AbstractJdbc23PooledConnection$StatementHandler.invoke(AbstractJdbc23PooledConnection.java:455)<br />
+at $Proxy8.executeQuery(Unknown Source)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:68)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAOTest.testCreate(PropertyDefinitionDAOTest.java:39)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>TypeDAOTest</h3>
+<a name="org.tagaprice.server.daoTypeDAOTest"></a>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCreate</td>
+<td>0.204</td>
+</tr>
+<tr class="b"><td><a href="#org.tagaprice.server.dao.TypeDAOTest.testRoot"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.dao.TypeDAOTest.testRoot">testRoot</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testRoot');"><span style="display: inline;" id="testRootoff">+</span><span id="testRooton" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.332</td>
+</tr>
+<tr class="a"><td></td>
+<td>FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+<td></td>
+</tr>
+<tr class="b"><td></td>
+<td>  <div id="testRooterror" style="display:none;"><div class="source"><pre>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht<br />
+Position: 55<br />
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:273)<br />
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.postgresql.ds.jdbc23.AbstractJdbc23PooledConnection$StatementHandler.invoke(AbstractJdbc23PooledConnection.java:455)<br />
+at $Proxy8.executeQuery(Unknown Source)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:68)<br />
+at org.tagaprice.server.dao.TypeDAO.getRec(TypeDAO.java:100)<br />
+at org.tagaprice.server.dao.TypeDAO.get(TypeDAO.java:44)<br />
+at org.tagaprice.server.dao.TypeDAOTest.testRoot(TypeDAOTest.java:39)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+<tr class="a"><td><a href="#org.tagaprice.server.dao.TypeDAOTest.testNotRoot"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.dao.TypeDAOTest.testNotRoot">testNotRoot</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testNotRoot');"><span style="display: inline;" id="testNotRootoff">+</span><span id="testNotRooton" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.496</td>
+</tr>
+<tr class="b"><td></td>
+<td>FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+<td></td>
+</tr>
+<tr class="a"><td></td>
+<td>  <div id="testNotRooterror" style="display:none;"><div class="source"><pre>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht<br />
+Position: 55<br />
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)<br />
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)<br />
+at org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:273)<br />
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)<br />
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br />
+at java.lang.reflect.Method.invoke(Method.java:597)<br />
+at org.postgresql.ds.jdbc23.AbstractJdbc23PooledConnection$StatementHandler.invoke(AbstractJdbc23PooledConnection.java:455)<br />
+at $Proxy8.executeQuery(Unknown Source)<br />
+at org.tagaprice.server.dao.PropertyDefinitionDAO.get(PropertyDefinitionDAO.java:68)<br />
+at org.tagaprice.server.dao.TypeDAO.getRec(TypeDAO.java:100)<br />
+at org.tagaprice.server.dao.TypeDAO.get(TypeDAO.java:44)<br />
+at org.tagaprice.server.dao.TypeDAOTest.testNotRoot(TypeDAOTest.java:49)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testChildType</td>
+<td>0.55</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>AccountDAOTest</h3>
+<a name="org.tagaprice.server.daoAccountDAOTest"></a>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCreate</td>
+<td>0.474</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>PropertyValidatorTest</h3>
+<a name="org.tagaprice.sharedPropertyValidatorTest"></a>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCount</td>
+<td>0.004</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testInt</td>
+<td>0.002</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testDouble</td>
+<td>0.001</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>EntityDAOTest</h3>
+<a name="org.tagaprice.server.daoEntityDAOTest"></a>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCreate</td>
+<td>0.592</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCreate_invalidRevision</td>
+<td>0.427</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCreate_invalidLocale</td>
+<td>0.415</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSave</td>
+<td>0.766</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>MorphWidgetTest</h3>
+<a name="org.tagaprice.clientMorphWidgetTest"></a>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetText</td>
+<td>0.001</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>LocalAccountDAOTest</h3>
+<a name="org.tagaprice.server.daoLocalAccountDAOTest"></a>
+<table class="bodyTable"><tr class="b"><td><a href="#org.tagaprice.server.dao.LocalAccountDAOTest.testCreate"><img src="images/icon_error_sml.gif" /></a>
+</td>
+<td><a href="#org.tagaprice.server.dao.LocalAccountDAOTest.testCreate">testCreate</a>
+  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testCreate');"><span style="display: inline;" id="testCreateoff">+</span><span id="testCreateon" style="display: none;">-</span> [ Detail ]</a>
+</div></td>
+<td>0.508</td>
+</tr>
+<tr class="a"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="b"><td></td>
+<td>  <div id="testCreateerror" style="display:none;"><div class="source"><pre>java.lang.NullPointerException<br />
+at org.tagaprice.server.dao.LocalAccountDAO.save(LocalAccountDAO.java:96)<br />
+at org.tagaprice.server.dao.LocalAccountDAOTest.testCreate(LocalAccountDAOTest.java:39)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
+</tr>
+</table>
+</div>
+<br />
+</div>
+<div class="section"><h2>Failure Details</h2>
+<a name="Failure_Details"></a>
+<p>[<a href="#Summary">Summary</a>
+] [<a href="#Package_List">Package List</a>
+] [<a href="#Test_Cases">Test Cases</a>
+]</p>
+<br />
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.client.ProductHandlerImplTest.initializationError"></a>
+initializationError</td>
+</tr>
+<tr class="b"><td></td>
+<td>java.lang.NoClassDefFoundError: com/google/gwt/dev/cfg/Condition</td>
+</tr>
+                                                                                                                                    <tr class="a"><td></td>
+<td>  <div id="initializationErrorerror" >org.tagaprice.client.ProductHandlerImplTest:</div></td>
+</tr>
+<tr class="b"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.dao.PropertyDAOTest.testRev"></a>
+testRev</td>
+</tr>
+<tr class="a"><td></td>
+<td>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+</tr>
+                                                                                                                                                                                        <tr class="b"><td></td>
+<td>  <div id="testReverror" >org.tagaprice.server.dao.PropertyDAOTest:</div></td>
+</tr>
+<tr class="a"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.dao.PropertyDAOTest.testCreate"></a>
+testCreate</td>
+</tr>
+<tr class="b"><td></td>
+<td>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+</tr>
+                                                                                                                                                                                    <tr class="a"><td></td>
+<td>  <div id="testCreateerror" >org.tagaprice.server.dao.PropertyDAOTest:</div></td>
+</tr>
+<tr class="b"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.dao.PropertyDAOTest.testPropertyId"></a>
+testPropertyId</td>
+</tr>
+<tr class="a"><td></td>
+<td>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+</tr>
+                                                                                                                                                                                    <tr class="b"><td></td>
+<td>  <div id="testPropertyIderror" >org.tagaprice.server.dao.PropertyDAOTest:</div></td>
+</tr>
+<tr class="a"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.dao.PropertyDAOTest.testValueUpdate"></a>
+testValueUpdate</td>
+</tr>
+<tr class="b"><td></td>
+<td>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+</tr>
+                                                                                                                                                                                    <tr class="a"><td></td>
+<td>  <div id="testValueUpdateerror" >org.tagaprice.server.dao.PropertyDAOTest:</div></td>
+</tr>
+<tr class="b"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.serializer.JsonDeSerializerTest.testReceiptData"></a>
+testReceiptData</td>
+</tr>
+<tr class="a"><td></td>
+<td>java.lang.AssertionError: Not yet implemented</td>
+</tr>
+        <tr class="b"><td></td>
+<td>  <div id="testReceiptDataerror" >org.tagaprice.server.serializer.JsonDeSerializerTest:177</div></td>
+</tr>
+<tr class="a"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.serializer.JsonDeSerializerTest.testShopData"></a>
+testShopData</td>
+</tr>
+<tr class="b"><td></td>
+<td>java.lang.AssertionError: Not yet implemented</td>
+</tr>
+        <tr class="a"><td></td>
+<td>  <div id="testShopDataerror" >org.tagaprice.server.serializer.JsonDeSerializerTest:219</div></td>
+</tr>
+<tr class="b"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.dao.PropertyDefinitionDAOTest.testCreate"></a>
+testCreate</td>
+</tr>
+<tr class="a"><td></td>
+<td>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+</tr>
+                                                        <tr class="b"><td></td>
+<td>  <div id="testCreateerror" >org.tagaprice.server.dao.PropertyDefinitionDAOTest:39</div></td>
+</tr>
+<tr class="a"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.dao.TypeDAOTest.testRoot"></a>
+testRoot</td>
+</tr>
+<tr class="b"><td></td>
+<td>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+</tr>
+                                                                <tr class="a"><td></td>
+<td>  <div id="testRooterror" >org.tagaprice.server.dao.TypeDAOTest:39</div></td>
+</tr>
+<tr class="b"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.dao.TypeDAOTest.testNotRoot"></a>
+testNotRoot</td>
+</tr>
+<tr class="a"><td></td>
+<td>org.postgresql.util.PSQLException: FEHLER: Spalte »unit_id« existiert nicht   Position: 55</td>
+</tr>
+                                                                <tr class="b"><td></td>
+<td>  <div id="testNotRooterror" >org.tagaprice.server.dao.TypeDAOTest:49</div></td>
+</tr>
+<tr class="a"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="org.tagaprice.server.dao.LocalAccountDAOTest.testCreate"></a>
+testCreate</td>
+</tr>
+<tr class="b"><td></td>
+<td>java.lang.NullPointerException</td>
+</tr>
+        <tr class="a"><td></td>
+<td>  <div id="testCreateerror" >org.tagaprice.server.dao.LocalAccountDAOTest:39</div></td>
+</tr>
+</table>
+<br />
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2010
+    
+          
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

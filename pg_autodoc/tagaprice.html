@@ -2208,6 +2208,30 @@
 				</td>
 			 </tr>
             
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.unit">unit.unit_id</a>
+                  
+                
+                </td>
+            	<td>unit_id</td>
+            	<td>bigint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
         </table>
 
         <!-- Inherits -->
@@ -2228,7 +2252,7 @@
             </tr>
 			
             <tr class="tr0">
-				<td>propertyrevision_check_name</td>
+				<td>propertyrevision_name_check</td>
                 <td>CHECK (((length((name)::text) &gt; 0) AND (substr((name)::text, 0, 1) = lower(substr((name)::text, 0, 1)))))</td>
             </tr>
 			
@@ -3157,6 +3181,10 @@
 		
 			<ul>
 				<li><a href="#public.table.entityproperty">entityproperty</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.propertyrevision">propertyrevision</a></li>
 			</ul>
 		
 			<ul>

@@ -30,7 +30,7 @@ edge [];
 
 "property" [shape = record, label = "{<col0> \N| prop_id:  bigint\l}" ];
 
-"propertyrevision" [shape = record, label = "{<col0> \N| prop_id:  bigint\lrev:  integer\lname:  character varying(50)\lminvalue:  integer\lmaxvalue:  integer\ltype:  propertytype\luniq:  boolean\l}" ];
+"propertyrevision" [shape = record, label = "{<col0> \N| prop_id:  bigint\lrev:  integer\lname:  character varying(50)\lminvalue:  integer\lmaxvalue:  integer\ltype:  propertytype\luniq:  boolean\lunit_id:  bigint\l}" ];
 
 "receipt" [shape = record, label = "{<col0> \N| rid:  bigint\lsid:  bigint\ldraft:  boolean\lcreated_at:  timestamp without time zone\l}" ];
 
@@ -75,6 +75,7 @@ edge [];
 "property" -> "entity" [label="property_prop_id_fkey"];
 "propertyrevision" -> "property" [label="propertyrevision_prop_id_fkey"];
 "propertyrevision" -> "entityrevision" [label="propertyrevision_prop_id_fkey1"];
+"propertyrevision" -> "unit" [label="propertyrevision_unit_id_fkey"];
 "receipt" -> "entity" [label="receipt_rid_fkey"];
 "receiptentry" -> "entity" [label="receiptentry_rid_fkey"];
 "session" -> "account" [label="session_uid_fkey"];

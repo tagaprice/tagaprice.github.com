@@ -2869,6 +2869,29 @@
           </dia:attribute>
         </dia:composite>
 
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#  unit_id#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#bigint#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+
+            <dia:string/>
+
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+
       </dia:attribute>
 
       <dia:attribute name="visible_operations">
@@ -2878,7 +2901,7 @@
 
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#propertyrevision_check_name#</dia:string>
+            <dia:string>#propertyrevision_name_check#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="3"/>
@@ -5264,6 +5287,32 @@
         <dia:point val="25.05,2.7"/>
       </dia:attribute>
       <dia:attribute name="constraint">
+        <dia:string>#propertyrevision_unit_id_fkey#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="text_pos">
+        <dia:point val="12.525,3.1"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O15" connection="22"/>
+        <dia:connection handle="1" to="O22" connection="9"/>
+      </dia:connections>
+    </dia:object>
+
+    <dia:object type="UML - Constraint" version="0" id="O51">
+      <dia:attribute name="obj_pos">
+        <dia:point val="0,3.5"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-0.0515705,2.29861;25.1127,3.55157"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="0,3.5"/>
+        <dia:point val="25.05,2.7"/>
+      </dia:attribute>
+      <dia:attribute name="constraint">
         <dia:string>#receipt_rid_fkey#</dia:string>
       </dia:attribute>
       <dia:attribute name="text_pos">
@@ -5278,7 +5327,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O51">
+    <dia:object type="UML - Constraint" version="0" id="O52">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5304,7 +5353,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O52">
+    <dia:object type="UML - Constraint" version="0" id="O53">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5330,7 +5379,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O53">
+    <dia:object type="UML - Constraint" version="0" id="O54">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5356,7 +5405,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O54">
+    <dia:object type="UML - Constraint" version="0" id="O55">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5382,7 +5431,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O55">
+    <dia:object type="UML - Constraint" version="0" id="O56">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5408,7 +5457,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O56">
+    <dia:object type="UML - Constraint" version="0" id="O57">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5434,7 +5483,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O57">
+    <dia:object type="UML - Constraint" version="0" id="O58">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5460,7 +5509,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O58">
+    <dia:object type="UML - Constraint" version="0" id="O59">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5486,7 +5535,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O59">
+    <dia:object type="UML - Constraint" version="0" id="O60">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5512,7 +5561,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O60">
+    <dia:object type="UML - Constraint" version="0" id="O61">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5538,7 +5587,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O61">
+    <dia:object type="UML - Constraint" version="0" id="O62">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5564,7 +5613,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O62">
+    <dia:object type="UML - Constraint" version="0" id="O63">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>
@@ -5590,7 +5639,7 @@
       </dia:connections>
     </dia:object>
 
-    <dia:object type="UML - Constraint" version="0" id="O63">
+    <dia:object type="UML - Constraint" version="0" id="O64">
       <dia:attribute name="obj_pos">
         <dia:point val="0,3.5"/>
       </dia:attribute>

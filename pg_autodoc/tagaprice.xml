@@ -2146,6 +2146,30 @@
             </listitem>
           </varlistentry>
 
+            <varlistentry>
+              <term><structfield>unit_id</structfield></term>
+              <listitem><para>
+                <type>bigint</type>
+
+
+
+
+
+
+
+
+
+
+
+
+                <literal>REFERENCES</literal> <xref linkend="public.table.unit"/>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
         </variablelist>
 
 
@@ -2154,7 +2178,7 @@
           <title>Constraints on propertyrevision</title>
 
           <varlistentry>
-            <term>propertyrevision_check_name</term>
+            <term>propertyrevision_name_check</term>
             <listitem><para>CHECK (((length((name)::text) &gt; 0) AND (substr((name)::text, 0, 1) = lower(substr((name)::text, 0, 1)))))</para></listitem>
           </varlistentry>
 
@@ -3049,6 +3073,14 @@
           <listitem>
             <para>
               <xref linkend="public.table.entityproperty"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.propertyrevision"/>
             </para>
           </listitem>
 

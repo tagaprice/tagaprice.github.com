@@ -521,7 +521,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>#Associates a Country Code with a Ti ... itle.#</dia:string>
+        <dia:string>#Associates a country code with a ti ... itle.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>

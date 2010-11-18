@@ -371,6 +371,10 @@
         </title>
  
 
+        <para>
+          Associates a Country Code with a Title and a Local Title.
+        </para>
+
 
         <para>
           <variablelist>

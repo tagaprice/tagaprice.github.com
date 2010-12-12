@@ -25,7 +25,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores information concerning any u ... OAuth#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -221,7 +221,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Represents a brand, e.g. Addidas, Nike, etc#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -521,7 +521,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Associates a country code with a ti ... itle.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -694,7 +694,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Represents a currency, e.g. euro, d ... , etc#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -821,7 +821,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#The base entity of almost all entit ... cal. #</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1073,7 +1073,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Any entity may have any number of p ... sion.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1371,7 +1371,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Represents a certain revision of an ... anch.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1646,7 +1646,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores information about a local ac ... rice.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1819,7 +1819,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Used for language localization to p ... tity.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2038,7 +2038,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Represents a particular product#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2165,7 +2165,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores information for products.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2384,7 +2384,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Product may be have one associated  ... ypes.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2511,7 +2511,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores the ids of any properties defined.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2638,7 +2638,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores revisionable data of propert ... ties.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2959,7 +2959,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#User add product information by pro ... data.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -3155,7 +3155,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#User add product information by pro ... self.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -3351,7 +3351,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Represents a user session.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -3524,7 +3524,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores the ids of shops.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -3651,7 +3651,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores all revisionable data of shops#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4057,7 +4057,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Product may be have one associated  ... ypes.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4230,7 +4230,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores the ids of all unitrevisions.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4357,7 +4357,7 @@
       </dia:attribute>
 
       <dia:attribute name="comment">
-        <dia:string>##</dia:string>
+        <dia:string>#Stores informations of units.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>

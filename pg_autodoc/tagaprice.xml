@@ -371,10 +371,6 @@
         </title>
  
 
-        <para>
-          Associates a country code with a title and a tocal title.
-        </para>
-
 
         <para>
           <variablelist>
@@ -405,10 +401,6 @@
 
               </para>
 
-              <para>
-                The unqiue country code for a country.
-              </para>
-
             </listitem>
           </varlistentry>
 
@@ -427,10 +419,6 @@
 
               </para>
 
-              <para>
-                The title or name for a country.
-              </para>
-
             </listitem>
           </varlistentry>
 
@@ -445,10 +433,6 @@
 
 
 
-              </para>
-
-              <para>
-                The localized title or name for a country.
               </para>
 
             </listitem>

@@ -133,8 +133,6 @@
 			<a name="public.table.account">account</a>
 		</h2>
         
-         <p>Stores information concerning any user accounts in tagaprice. User accounts may be local or from other systems, e.g. OAuth</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -173,7 +171,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the account in this case.
+				
 				</td>
 			 </tr>
             
@@ -289,8 +287,6 @@
 		<h2>Table:
 			<a name="public.table.brand">brand</a>
 		</h2>
-        
-         <p>Represents a brand, e.g. Addidas, Nike, etc</p>
         
 
 
@@ -413,7 +409,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the associated account/user in this case.
+				
 				</td>
 			 </tr>
             
@@ -429,7 +425,7 @@
 				
 				
 				</i>
-				<br><br>A token to confirm an account.
+				
 				</td>
 			 </tr>
             
@@ -445,7 +441,7 @@
 				NOT NULL
 				DEFAULT now()
 				</i>
-				<br><br>The date until the confirm-token is valid.
+				
 				</td>
 			 </tr>
             
@@ -483,8 +479,6 @@
 			<a name="public.table.country">country</a>
 		</h2>
         
-         <p>Associates a country code with a title and a tocal title.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -515,7 +509,7 @@
 				
 				
 				</i>
-				<br><br>The unqiue country code for a country.
+				
 				</td>
 			 </tr>
             
@@ -531,7 +525,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The title or name for a country.
+				
 				</td>
 			 </tr>
             
@@ -547,7 +541,7 @@
 				
 				
 				</i>
-				<br><br>The localized title or name for a country.
+				
 				</td>
 			 </tr>
             
@@ -591,8 +585,6 @@
 		<h2>Table:
 			<a name="public.table.currency">currency</a>
 		</h2>
-        
-         <p>Represents a currency, e.g. euro, dollar, etc</p>
         
 
 
@@ -670,8 +662,6 @@
 			<a name="public.table.entity">entity</a>
 		</h2>
         
-         <p>The base entity of almost all entities. It provides basic information such as creator, create time, current revision and local. </p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -710,7 +700,7 @@
 				
 				
 				</i>
-				<br><br>A unique id identifying a single entity.
+				
 				</td>
 			 </tr>
             
@@ -734,7 +724,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>Id indicating the local of this entity.
+				
 				</td>
 			 </tr>
             
@@ -750,7 +740,7 @@
 				NOT NULL
 				DEFAULT now()
 				</i>
-				<br><br>The timestamp when this entity has been created.
+				
 				</td>
 			 </tr>
             
@@ -774,7 +764,7 @@
 				
 				
 				</i>
-				<br><br>Entities are revisionable. This number indicates the current revision of this entity.
+				
 				</td>
 			 </tr>
             
@@ -902,8 +892,6 @@
 			<a name="public.table.entityproperty">entityproperty</a>
 		</h2>
         
-         <p>Any entity may have any number of properties. This table stores the entity-specific or &quot;dynamic&quot; data of a property for a concrete entity. E.g. for a property weight and an associated product, this table stores data like the value. &quot;Static&quot; or property-specific data is stored in propertyRevision.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -934,7 +922,7 @@
 				
 				
 				</i>
-				<br><br>The locally unique id to identify an assignement of a property for a particular entity.
+				
 				</td>
 			 </tr>
             
@@ -958,7 +946,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The id of the associated property, as stored in table property.
+				
 				</td>
 			 </tr>
             
@@ -998,7 +986,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The entity this property belongs to.
+				
 				</td>
 			 </tr>
             
@@ -1014,7 +1002,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The value of the assignement. E.g. the entity/product &quot;milk&quot; may have the property &quot;amount&quot; with value=&quot;100&quot; (mililiter, where the unit is mililiter).
+				
 				</td>
 			 </tr>
             
@@ -1038,7 +1026,7 @@
 				
 				
 				</i>
-				<br><br>The unit of this property, e.g. for a property with title &quot;weight&quot; this references to a unit &quot;kg&quot;.
+				
 				</td>
 			 </tr>
             
@@ -1062,7 +1050,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>Min_rev and max_rev indicate the span of life for the property, i.e. from which revision to which revision of the corresponding entity the property is valid.
+				
 				</td>
 			 </tr>
             
@@ -1086,7 +1074,7 @@
 				
 				
 				</i>
-				<br><br>Min_rev and max_rev indicate the span of life for the property, i.e. from which revision to which revision of the corresponding entity the property is valid. Max_rev may be null to indicate that the property is still associated to the corresponding entity.
+				
 				</td>
 			 </tr>
             
@@ -1139,8 +1127,6 @@
 			<a name="public.table.entityrevision">entityrevision</a>
 		</h2>
         
-         <p>Represents a certain revision of any entity. When saving a new (at least one column is different) revision of an entity, a new revision should be created. Identical values are saved twice. Branches are not possible, i.e. the only branch is the master branch.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -1179,7 +1165,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the entitiy revision in this case.
+				
 				</td>
 			 </tr>
             
@@ -1202,7 +1188,7 @@
 				
 				
 				</i>
-				<br><br>The number of this revision. Rev must be equal or great than 0. Since branching is not possible, the rev values for one particualr product is a consecutive sequence of numbers without gaps in between.
+				
 				</td>
 			 </tr>
             
@@ -1218,7 +1204,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The title of this entityrevision, e.g. for a product the productname.
+				
 				</td>
 			 </tr>
             
@@ -1234,7 +1220,7 @@
 				NOT NULL
 				DEFAULT now()
 				</i>
-				<br><br>The time when the entity revision has been created.
+				
 				</td>
 			 </tr>
             
@@ -1258,7 +1244,7 @@
 				
 				
 				</i>
-				<br><br>Identifies the group this entity (revision) belongs to. A group is used to connect different locales of an entity to each other forming a group.
+				
 				</td>
 			 </tr>
             
@@ -1282,7 +1268,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The creator of this revision, i.e. a reference to their account.
+				
 				</td>
 			 </tr>
             
@@ -1366,8 +1352,6 @@
 			<a name="public.table.localaccount">localaccount</a>
 		</h2>
         
-         <p>Stores information about a local accout for a user. Local account, in contrast to accounts like OAuth accounts, store their passwords locally at TagAPrice.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -1406,7 +1390,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the associated account/user in this case.
+				
 				</td>
 			 </tr>
             
@@ -1422,7 +1406,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The Password of the local account.
+				
 				</td>
 			 </tr>
             
@@ -1438,7 +1422,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The salt code for the password
+				
 				</td>
 			 </tr>
             
@@ -1476,8 +1460,6 @@
 			<a name="public.table.locale">locale</a>
 		</h2>
         
-         <p>Used for language localization to provide translations for other languages. An entity has a local providing information about the language of the entity.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -1508,7 +1490,7 @@
 				
 				
 				</i>
-				<br><br>Id to identify a local.
+				
 				</td>
 			 </tr>
             
@@ -1532,7 +1514,7 @@
 				
 				
 				</i>
-				<br><br>Reference to a local which can be used as fallback, e.g. if current local does not provide a localtitle.
+				
 				</td>
 			 </tr>
             
@@ -1548,7 +1530,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The name of the language of the associated entity in English.
+				
 				</td>
 			 </tr>
             
@@ -1564,7 +1546,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The name of the language of the associated entity in the language.
+				
 				</td>
 			 </tr>
             
@@ -1580,7 +1562,7 @@
 				NOT NULL
 				DEFAULT now()
 				</i>
-				<br><br>The time when the local has been created
+				
 				</td>
 			 </tr>
             
@@ -1629,8 +1611,6 @@
 			<a name="public.table.product">product</a>
 		</h2>
         
-         <p>Represents a particular product</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -1669,7 +1649,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the product in this case.
+				
 				</td>
 			 </tr>
             
@@ -1713,8 +1693,6 @@
 		<h2>Table:
 			<a name="public.table.productrevision">productrevision</a>
 		</h2>
-        
-         <p>Stores information for products.</p>
         
 
 
@@ -1762,7 +1740,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the product revision in this case.
+				
 				</td>
 			 </tr>
             
@@ -1793,7 +1771,7 @@
 				
 				
 				</i>
-				<br><br>The revision of the product.
+				
 				</td>
 			 </tr>
             
@@ -1817,7 +1795,7 @@
 				
 				
 				</i>
-				<br><br>The associated product type, i.e. the product category. May be NULL if product is not associated to any category.
+				
 				</td>
 			 </tr>
             
@@ -1841,7 +1819,7 @@
 				
 				
 				</i>
-				<br><br>The associated brand for the product. May be NULL.
+				
 				</td>
 			 </tr>
             
@@ -1857,7 +1835,7 @@
 				
 				
 				</i>
-				<br><br>The URL for an image of the product.
+				
 				</td>
 			 </tr>
             
@@ -1894,8 +1872,6 @@
 		<h2>Table:
 			<a name="public.table.producttype">producttype</a>
 		</h2>
-        
-         <p>Product may be have one associated category or type, e.g. &quot;Milk Products&quot;. This table stores ids of all categories/types.</p>
         
 
 
@@ -1935,7 +1911,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identifies an entity, i.e. the productType in this case.
+				
 				</td>
 			 </tr>
             
@@ -1984,8 +1960,6 @@
 			<a name="public.table.property">property</a>
 		</h2>
         
-         <p>Stores the ids of any properties defined.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -2024,7 +1998,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the property in this case.
+				
 				</td>
 			 </tr>
             
@@ -2073,8 +2047,6 @@
 			<a name="public.table.propertyrevision">propertyrevision</a>
 		</h2>
         
-         <p>Stores revisionable data of properties. Check entityproperty for more information about properties.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -2121,7 +2093,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the propertyRevision in this case.
+				
 				</td>
 			 </tr>
             
@@ -2152,7 +2124,7 @@
 				
 				
 				</i>
-				<br><br>The revision of the property.
+				
 				</td>
 			 </tr>
             
@@ -2168,7 +2140,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>An identifier similiar to a variable in programming code, for clients to identify the property. Must be in English. E.g. &quot;weight&quot; for a property with title=&quot;Weight&quot;
+				
 				</td>
 			 </tr>
             
@@ -2184,7 +2156,7 @@
 				
 				
 				</i>
-				<br><br>For countable properties boundaries may be defined by using minValue and maxValue.
+				
 				</td>
 			 </tr>
             
@@ -2200,7 +2172,7 @@
 				
 				
 				</i>
-				<br><br>For countable properties boundaries may be defined by using minValue and maxValue.
+				
 				</td>
 			 </tr>
             
@@ -2216,7 +2188,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The datatype of the property. One of &quot;string&quot;,&quot;double&quot; or &quot;int&quot;
+				
 				</td>
 			 </tr>
             
@@ -2232,7 +2204,7 @@
 				NOT NULL
 				DEFAULT true
 				</i>
-				<br><br>Indicates if a property may be used multiple times for a single entity.
+				
 				</td>
 			 </tr>
             
@@ -2256,7 +2228,7 @@
 				
 				
 				</i>
-				<br><br>The unit of the property, if available.
+				
 				</td>
 			 </tr>
             
@@ -2309,8 +2281,6 @@
 			<a name="public.table.receipt">receipt</a>
 		</h2>
         
-         <p>User add product information by providing receipts of purchases. This table stores the receipt data.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -2349,7 +2319,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the receipt in this case.
+				
 				</td>
 			 </tr>
             
@@ -2365,7 +2335,7 @@
 				
 				
 				</i>
-				<br><br>The shop where the receipt has been created.
+				
 				</td>
 			 </tr>
             
@@ -2381,7 +2351,7 @@
 				NOT NULL
 				DEFAULT true
 				</i>
-				<br><br>Indicates whether the receipt is a draft or not.
+				
 				</td>
 			 </tr>
             
@@ -2397,7 +2367,7 @@
 				NOT NULL
 				DEFAULT now()
 				</i>
-				<br><br>The time when the receipt has been created.
+				
 				</td>
 			 </tr>
             
@@ -2435,8 +2405,6 @@
 			<a name="public.table.receiptentry">receiptentry</a>
 		</h2>
         
-         <p>User add product information by providing receipts of purchases. This table stores the data of entires of the receipt which are not associated to the product itself.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -2467,7 +2435,7 @@
 				
 				
 				</i>
-				<br><br>An unique ID.
+				
 				</td>
 			 </tr>
             
@@ -2491,7 +2459,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The associated receipt.
+				
 				</td>
 			 </tr>
             
@@ -2507,7 +2475,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The associated product.
+				
 				</td>
 			 </tr>
             
@@ -2523,7 +2491,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The price of the associated product as noted on the receipt.
+				
 				</td>
 			 </tr>
             
@@ -2561,8 +2529,6 @@
 			<a name="public.table.session">session</a>
 		</h2>
         
-         <p>Represents a user session.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -2594,7 +2560,7 @@
 				NOT NULL
 				
 				</i>
-				<br><br>The id of the user associated to this user session.
+				
 				</td>
 			 </tr>
             
@@ -2617,7 +2583,7 @@
 				
 				
 				</i>
-				<br><br>The unique session id for this user session.
+				
 				</td>
 			 </tr>
             
@@ -2633,7 +2599,7 @@
 				NOT NULL
 				DEFAULT now()
 				</i>
-				<br><br>The time of the last request of the user indicated by uid. (so that we&#39;re able to detect expired sessions)
+				
 				</td>
 			 </tr>
             
@@ -2673,8 +2639,6 @@
 			<a name="public.table.shop">shop</a>
 		</h2>
         
-         <p>Stores the ids of shops.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -2713,7 +2677,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identifies an entity, i.e. the shop in this case.
+				
 				</td>
 			 </tr>
             
@@ -2757,8 +2721,6 @@
 		<h2>Table:
 			<a name="public.table.shoprevision">shoprevision</a>
 		</h2>
-        
-         <p>Stores all revisionable data of shops</p>
         
 
 
@@ -2806,7 +2768,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the shop in this case.
+				
 				</td>
 			 </tr>
             
@@ -2837,7 +2799,7 @@
 				
 				
 				</i>
-				<br><br>The revision# of this shop
+				
 				</td>
 			 </tr>
             
@@ -2853,7 +2815,7 @@
 				
 				
 				</i>
-				<br><br>The type or category of the shop. Not implemented yet.
+				
 				</td>
 			 </tr>
             
@@ -2869,7 +2831,7 @@
 				
 				
 				</i>
-				<br><br>The url of an image of the shop.
+				
 				</td>
 			 </tr>
             
@@ -2885,7 +2847,7 @@
 				
 				
 				</i>
-				<br><br>A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
+				
 				</td>
 			 </tr>
             
@@ -2901,7 +2863,7 @@
 				
 				
 				</i>
-				<br><br>A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
+				
 				</td>
 			 </tr>
             
@@ -2917,7 +2879,7 @@
 				
 				
 				</i>
-				<br><br>A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
+				
 				</td>
 			 </tr>
             
@@ -2933,7 +2895,7 @@
 				
 				
 				</i>
-				<br><br>A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
+				
 				</td>
 			 </tr>
             
@@ -2957,7 +2919,7 @@
 				
 				
 				</i>
-				<br><br>A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
+				
 				</td>
 			 </tr>
             
@@ -3020,8 +2982,6 @@
 			<a name="public.table.typerevision">typerevision</a>
 		</h2>
         
-         <p>Product may be have one associated category or type, e.g. &quot;Milk Products&quot;. This table stores information about categories/types.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -3068,7 +3028,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identifies an entity, i.e. the productType in this case.
+				
 				</td>
 			 </tr>
             
@@ -3099,7 +3059,7 @@
 				
 				
 				</i>
-				<br><br>The revision# of this type.
+				
 				</td>
 			 </tr>
             
@@ -3123,7 +3083,7 @@
 				
 				
 				</i>
-				<br><br>Categories/types may be grouped in an own type-hierarchy. E.g. category &quot;Milk Products&quot; has a subcategory &quot;Milk Shakes&quot;. The parent_id may be null if no parent category is specified.
+				
 				</td>
 			 </tr>
             
@@ -3160,8 +3120,6 @@
 		<h2>Table:
 			<a name="public.table.unit">unit</a>
 		</h2>
-        
-         <p>Stores the ids of all unitrevisions.</p>
         
 
 
@@ -3201,7 +3159,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the unit in this case.
+				
 				</td>
 			 </tr>
             
@@ -3254,8 +3212,6 @@
 			<a name="public.table.unitrevision">unitrevision</a>
 		</h2>
         
-         <p>Stores informations of units.</p>
-        
 
 
         <table width="100%" cellspacing="0" cellpadding="3">
@@ -3302,7 +3258,7 @@
 				
 				
 				</i>
-				<br><br>Globally unique id to identify an entity, i.e. the unit in this case.
+				
 				</td>
 			 </tr>
             
@@ -3333,7 +3289,7 @@
 				
 				
 				</i>
-				<br><br>The revision# of the unit.
+				
 				</td>
 			 </tr>
             
@@ -3357,7 +3313,7 @@
 				
 				
 				</i>
-				<br><br>Units may have a base unit specified, e.g. a base unit for the unit &quot;miles&quot; might be &quot;kilometers&quot;, thus the (conversion) factor is 1 : 1.6. The base unit must be set iff the factor is set.
+				
 				</td>
 			 </tr>
             
@@ -3373,7 +3329,7 @@
 				
 				
 				</i>
-				<br><br>Units may have a base unit and a (conversion) factor specified, e.g. a base unit for the unit &quot;miles&quot; might be &quot;kilometers&quot; the factor is 1 : 1.6. The base unit must be set iff the factor is set.
+				
 				</td>
 			 </tr>
             

@@ -21,6 +21,10 @@
         </title>
  
 
+        <para>
+          Stores information concerning any user accounts in tagaprice. User accounts may be local or from other systems, e.g. OAuth
+        </para>
+
 
         <para>
           <variablelist>
@@ -57,6 +61,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
 
 
+              </para>
+
+              <para>
+                Globally unique id to identify an entity, i.e. the account in this case.
               </para>
 
             </listitem>
@@ -192,6 +200,10 @@
         </title>
  
 
+        <para>
+          Represents a brand, e.g. Addidas, Nike, etc
+        </para>
+
 
         <para>
           <variablelist>
@@ -309,6 +321,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identify an entity, i.e. the associated account/user in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -323,6 +339,10 @@
 
 
 
+              </para>
+
+              <para>
+                A token to confirm an account.
               </para>
 
             </listitem>
@@ -343,6 +363,10 @@
 
 
 
+              </para>
+
+              <para>
+                The date until the confirm-token is valid.
               </para>
 
             </listitem>
@@ -370,6 +394,10 @@
          <structname>country</structname>
         </title>
  
+
+        <para>
+          Associates a country code with a title and a tocal title.
+        </para>
 
 
         <para>
@@ -401,6 +429,10 @@
 
               </para>
 
+              <para>
+                The unqiue country code for a country.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -419,6 +451,10 @@
 
               </para>
 
+              <para>
+                The title or name for a country.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -433,6 +469,10 @@
 
 
 
+              </para>
+
+              <para>
+                The localized title or name for a country.
               </para>
 
             </listitem>
@@ -475,6 +515,10 @@
          <structname>currency</structname>
         </title>
  
+
+        <para>
+          Represents a currency, e.g. euro, dollar, etc
+        </para>
 
 
         <para>
@@ -540,6 +584,10 @@
         </title>
  
 
+        <para>
+          The base entity of almost all entities. It provides basic information such as creator, create time, current revision and local. 
+        </para>
+
 
         <para>
           <variablelist>
@@ -578,6 +626,10 @@
 
               </para>
 
+              <para>
+                A unique id identifying a single entity.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -604,6 +656,10 @@
 
               </para>
 
+              <para>
+                Id indicating the local of this entity.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -622,6 +678,10 @@
 
 
 
+              </para>
+
+              <para>
+                The timestamp when this entity has been created.
               </para>
 
             </listitem>
@@ -646,6 +706,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
 
 
+              </para>
+
+              <para>
+                Entities are revisionable. This number indicates the current revision of this entity.
               </para>
 
             </listitem>
@@ -815,6 +879,10 @@
         </title>
  
 
+        <para>
+          Any entity may have any number of properties. This table stores the entity-specific or &quot;dynamic&quot; data of a property for a concrete entity. E.g. for a property weight and an associated product, this table stores data like the value. &quot;Static&quot; or property-specific data is stored in propertyRevision.
+        </para>
+
 
         <para>
           <variablelist>
@@ -845,6 +913,10 @@
 
               </para>
 
+              <para>
+                The locally unique id to identify an assignement of a property for a particular entity.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -869,6 +941,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.property"/>
 
 
+              </para>
+
+              <para>
+                The id of the associated property, as stored in table property.
               </para>
 
             </listitem>
@@ -913,6 +989,10 @@
 
               </para>
 
+              <para>
+                The entity this property belongs to.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -929,6 +1009,10 @@
 
 
 
+              </para>
+
+              <para>
+                The value of the assignement. E.g. the entity/product &quot;milk&quot; may have the property &quot;amount&quot; with value=&quot;100&quot; (mililiter, where the unit is mililiter).
               </para>
 
             </listitem>
@@ -953,6 +1037,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.unit"/>
 
 
+              </para>
+
+              <para>
+                The unit of this property, e.g. for a property with title &quot;weight&quot; this references to a unit &quot;kg&quot;.
               </para>
 
             </listitem>
@@ -981,6 +1069,10 @@
 
               </para>
 
+              <para>
+                Min_rev and max_rev indicate the span of life for the property, i.e. from which revision to which revision of the corresponding entity the property is valid.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1003,6 +1095,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.entityrevision"/>
 
 
+              </para>
+
+              <para>
+                Min_rev and max_rev indicate the span of life for the property, i.e. from which revision to which revision of the corresponding entity the property is valid. Max_rev may be null to indicate that the property is still associated to the corresponding entity.
               </para>
 
             </listitem>
@@ -1043,6 +1139,10 @@
         </title>
  
 
+        <para>
+          Represents a certain revision of any entity. When saving a new (at least one column is different) revision of an entity, a new revision should be created. Identical values are saved twice. Branches are not possible, i.e. the only branch is the master branch.
+        </para>
+
 
         <para>
           <variablelist>
@@ -1081,6 +1181,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identify an entity, i.e. the entitiy revision in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1106,6 +1210,10 @@
 
               </para>
 
+              <para>
+                The number of this revision. Rev must be equal or great than 0. Since branching is not possible, the rev values for one particualr product is a consecutive sequence of numbers without gaps in between.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1122,6 +1230,10 @@
 
 
 
+              </para>
+
+              <para>
+                The title of this entityrevision, e.g. for a product the productname.
               </para>
 
             </listitem>
@@ -1142,6 +1254,10 @@
 
 
 
+              </para>
+
+              <para>
+                The time when the entity revision has been created.
               </para>
 
             </listitem>
@@ -1168,6 +1284,10 @@
 
               </para>
 
+              <para>
+                Identifies the group this entity (revision) belongs to. A group is used to connect different locales of an entity to each other forming a group.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1192,6 +1312,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.account"/>
 
 
+              </para>
+
+              <para>
+                The creator of this revision, i.e. a reference to their account.
               </para>
 
             </listitem>
@@ -1295,6 +1419,10 @@
         </title>
  
 
+        <para>
+          Stores information about a local accout for a user. Local account, in contrast to accounts like OAuth accounts, store their passwords locally at TagAPrice.
+        </para>
+
 
         <para>
           <variablelist>
@@ -1333,6 +1461,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identify an entity, i.e. the associated account/user in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1351,6 +1483,10 @@
 
               </para>
 
+              <para>
+                The Password of the local account.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1367,6 +1503,10 @@
 
 
 
+              </para>
+
+              <para>
+                The salt code for the password
               </para>
 
             </listitem>
@@ -1394,6 +1534,10 @@
          <structname>locale</structname>
         </title>
  
+
+        <para>
+          Used for language localization to provide translations for other languages. An entity has a local providing information about the language of the entity.
+        </para>
 
 
         <para>
@@ -1425,6 +1569,10 @@
 
               </para>
 
+              <para>
+                Id to identify a local.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1449,6 +1597,10 @@
 
               </para>
 
+              <para>
+                Reference to a local which can be used as fallback, e.g. if current local does not provide a localtitle.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1465,6 +1617,10 @@
 
 
 
+              </para>
+
+              <para>
+                The name of the language of the associated entity in English.
               </para>
 
             </listitem>
@@ -1485,6 +1641,10 @@
 
               </para>
 
+              <para>
+                The name of the language of the associated entity in the language.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1503,6 +1663,10 @@
 
 
 
+              </para>
+
+              <para>
+                The time when the local has been created
               </para>
 
             </listitem>
@@ -1554,6 +1718,10 @@
         </title>
  
 
+        <para>
+          Represents a particular product
+        </para>
+
 
         <para>
           <variablelist>
@@ -1590,6 +1758,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
 
 
+              </para>
+
+              <para>
+                Globally unique id to identify an entity, i.e. the product in this case.
               </para>
 
             </listitem>
@@ -1632,6 +1804,10 @@
          <structname>productrevision</structname>
         </title>
  
+
+        <para>
+          Stores information for products.
+        </para>
 
 
         <para>
@@ -1679,6 +1855,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identify an entity, i.e. the product revision in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1712,6 +1892,10 @@
 
               </para>
 
+              <para>
+                The revision of the product.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1734,6 +1918,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.producttype"/>
 
 
+              </para>
+
+              <para>
+                The associated product type, i.e. the product category. May be NULL if product is not associated to any category.
               </para>
 
             </listitem>
@@ -1760,6 +1948,10 @@
 
               </para>
 
+              <para>
+                The associated brand for the product. May be NULL.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -1774,6 +1966,10 @@
 
 
 
+              </para>
+
+              <para>
+                The URL for an image of the product.
               </para>
 
             </listitem>
@@ -1801,6 +1997,10 @@
          <structname>producttype</structname>
         </title>
  
+
+        <para>
+          Product may be have one associated category or type, e.g. &quot;Milk Products&quot;. This table stores ids of all categories/types.
+        </para>
 
 
         <para>
@@ -1838,6 +2038,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
 
 
+              </para>
+
+              <para>
+                Globally unique id to identifies an entity, i.e. the productType in this case.
               </para>
 
             </listitem>
@@ -1889,6 +2093,10 @@
         </title>
  
 
+        <para>
+          Stores the ids of any properties defined.
+        </para>
+
 
         <para>
           <variablelist>
@@ -1925,6 +2133,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
 
 
+              </para>
+
+              <para>
+                Globally unique id to identify an entity, i.e. the property in this case.
               </para>
 
             </listitem>
@@ -1976,6 +2188,10 @@
         </title>
  
 
+        <para>
+          Stores revisionable data of properties. Check entityproperty for more information about properties.
+        </para>
+
 
         <para>
           <variablelist>
@@ -2022,6 +2238,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identify an entity, i.e. the propertyRevision in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2055,6 +2275,10 @@
 
               </para>
 
+              <para>
+                The revision of the property.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2073,6 +2297,10 @@
 
               </para>
 
+              <para>
+                An identifier similiar to a variable in programming code, for clients to identify the property. Must be in English. E.g. &quot;weight&quot; for a property with title=&quot;Weight&quot;
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2089,6 +2317,10 @@
 
               </para>
 
+              <para>
+                For countable properties boundaries may be defined by using minValue and maxValue.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2103,6 +2335,10 @@
 
 
 
+              </para>
+
+              <para>
+                For countable properties boundaries may be defined by using minValue and maxValue.
               </para>
 
             </listitem>
@@ -2123,6 +2359,10 @@
 
               </para>
 
+              <para>
+                The datatype of the property. One of &quot;string&quot;,&quot;double&quot; or &quot;int&quot;
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2141,6 +2381,10 @@
 
 
 
+              </para>
+
+              <para>
+                Indicates if a property may be used multiple times for a single entity.
               </para>
 
             </listitem>
@@ -2165,6 +2409,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.unit"/>
 
 
+              </para>
+
+              <para>
+                The unit of the property, if available.
               </para>
 
             </listitem>
@@ -2205,6 +2453,10 @@
         </title>
  
 
+        <para>
+          User add product information by providing receipts of purchases. This table stores the receipt data.
+        </para>
+
 
         <para>
           <variablelist>
@@ -2243,6 +2495,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identify an entity, i.e. the receipt in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2257,6 +2513,10 @@
 
 
 
+              </para>
+
+              <para>
+                The shop where the receipt has been created.
               </para>
 
             </listitem>
@@ -2279,6 +2539,10 @@
 
               </para>
 
+              <para>
+                Indicates whether the receipt is a draft or not.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2297,6 +2561,10 @@
 
 
 
+              </para>
+
+              <para>
+                The time when the receipt has been created.
               </para>
 
             </listitem>
@@ -2324,6 +2592,10 @@
          <structname>receiptentry</structname>
         </title>
  
+
+        <para>
+          User add product information by providing receipts of purchases. This table stores the data of entires of the receipt which are not associated to the product itself.
+        </para>
 
 
         <para>
@@ -2355,6 +2627,10 @@
 
               </para>
 
+              <para>
+                An unique ID.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2381,6 +2657,10 @@
 
               </para>
 
+              <para>
+                The associated receipt.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2399,6 +2679,10 @@
 
               </para>
 
+              <para>
+                The associated product.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2415,6 +2699,10 @@
 
 
 
+              </para>
+
+              <para>
+                The price of the associated product as noted on the receipt.
               </para>
 
             </listitem>
@@ -2442,6 +2730,10 @@
          <structname>session</structname>
         </title>
  
+
+        <para>
+          Represents a user session.
+        </para>
 
 
         <para>
@@ -2474,6 +2766,10 @@
 
               </para>
 
+              <para>
+                The id of the user associated to this user session.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2499,6 +2795,10 @@
 
               </para>
 
+              <para>
+                The unique session id for this user session.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2517,6 +2817,10 @@
 
 
 
+              </para>
+
+              <para>
+                The time of the last request of the user indicated by uid. (so that we&apos;re able to detect expired sessions)
               </para>
 
             </listitem>
@@ -2557,6 +2861,10 @@
         </title>
  
 
+        <para>
+          Stores the ids of shops.
+        </para>
+
 
         <para>
           <variablelist>
@@ -2593,6 +2901,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
 
 
+              </para>
+
+              <para>
+                Globally unique id to identifies an entity, i.e. the shop in this case.
               </para>
 
             </listitem>
@@ -2635,6 +2947,10 @@
          <structname>shoprevision</structname>
         </title>
  
+
+        <para>
+          Stores all revisionable data of shops
+        </para>
 
 
         <para>
@@ -2682,6 +2998,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identify an entity, i.e. the shop in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2715,6 +3035,10 @@
 
               </para>
 
+              <para>
+                The revision# of this shop
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2729,6 +3053,10 @@
 
 
 
+              </para>
+
+              <para>
+                The type or category of the shop. Not implemented yet.
               </para>
 
             </listitem>
@@ -2747,6 +3075,10 @@
 
               </para>
 
+              <para>
+                The url of an image of the shop.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2761,6 +3093,10 @@
 
 
 
+              </para>
+
+              <para>
+                A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
               </para>
 
             </listitem>
@@ -2779,6 +3115,10 @@
 
               </para>
 
+              <para>
+                A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2795,6 +3135,10 @@
 
               </para>
 
+              <para>
+                A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2809,6 +3153,10 @@
 
 
 
+              </para>
+
+              <para>
+                A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
               </para>
 
             </listitem>
@@ -2833,6 +3181,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.country"/>
 
 
+              </para>
+
+              <para>
+                A shop s position may be indicated by either latitude (lat) and longitude (lng) and/or by its street (incl. #), city and countrycode.
               </para>
 
             </listitem>
@@ -2887,6 +3239,10 @@
         </title>
  
 
+        <para>
+          Product may be have one associated category or type, e.g. &quot;Milk Products&quot;. This table stores information about categories/types.
+        </para>
+
 
         <para>
           <variablelist>
@@ -2933,6 +3289,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identifies an entity, i.e. the productType in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2966,6 +3326,10 @@
 
               </para>
 
+              <para>
+                The revision# of this type.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -2988,6 +3352,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.producttype"/>
 
 
+              </para>
+
+              <para>
+                Categories/types may be grouped in an own type-hierarchy. E.g. category &quot;Milk Products&quot; has a subcategory &quot;Milk Shakes&quot;. The parent_id may be null if no parent category is specified.
               </para>
 
             </listitem>
@@ -3015,6 +3383,10 @@
          <structname>unit</structname>
         </title>
  
+
+        <para>
+          Stores the ids of all unitrevisions.
+        </para>
 
 
         <para>
@@ -3052,6 +3424,10 @@
                 <literal>REFERENCES</literal> <xref linkend="public.table.entity"/>
 
 
+              </para>
+
+              <para>
+                Globally unique id to identify an entity, i.e. the unit in this case.
               </para>
 
             </listitem>
@@ -3111,6 +3487,10 @@
         </title>
  
 
+        <para>
+          Stores informations of units.
+        </para>
+
 
         <para>
           <variablelist>
@@ -3157,6 +3537,10 @@
 
               </para>
 
+              <para>
+                Globally unique id to identify an entity, i.e. the unit in this case.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -3190,6 +3574,10 @@
 
               </para>
 
+              <para>
+                The revision# of the unit.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -3214,6 +3602,10 @@
 
               </para>
 
+              <para>
+                Units may have a base unit specified, e.g. a base unit for the unit &quot;miles&quot; might be &quot;kilometers&quot;, thus the (conversion) factor is 1 : 1.6. The base unit must be set iff the factor is set.
+              </para>
+
             </listitem>
           </varlistentry>
 
@@ -3228,6 +3620,10 @@
 
 
 
+              </para>
+
+              <para>
+                Units may have a base unit and a (conversion) factor specified, e.g. a base unit for the unit &quot;miles&quot; might be &quot;kilometers&quot; the factor is 1 : 1.6. The base unit must be set iff the factor is set.
               </para>
 
             </listitem>
